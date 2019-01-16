@@ -53,12 +53,6 @@ def main():
         nargs="?",
     )
     shortcut_parser.add_argument(
-        "-d",
-        "--desktop-shortcut",
-        help="Also create shortcut on the desktop",
-        action="store_true",
-    )
-    shortcut_parser.add_argument(
         "-n",
         "--name",
         help="Set a different name instead of $x.exe in desktop file",
