@@ -180,16 +180,16 @@ def run(args, cfg: Config, prefixen: Dict[str, Path]):
 
 def shortcut(args, cfg: Config, prefixen: Dict[str, Path]):
     prefix = environ.get("WINEPREFIX", None)
-    if args.PREFIX != None:
+    if args.PREFIX is not None:
         prefix = args.PREFIX
 
-    if prefix == None:
+    if prefix is None:
         exit("Don't know what wineprefix to use")
 
     create_desktop_file(
         prefix,
         args.EXE,
-        args.name if args.name != None else Path(args.EXE).name,
+        args.name if args.name is not None else Path(args.EXE).name,
     )
 
 
